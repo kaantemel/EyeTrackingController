@@ -100,19 +100,9 @@ Options available:
 ## Calibration
 Calibration is straightforward and does not require any specific user interaction, thanks to the robust design which uses simple eye movement detection without the need for precise pupil tracking.
 
-
 ## Acknowledgments
 - Prof. Dr. Tillmann Schwörer and Prof. Dr. Stephan Doerfel for their guidance.
 - Prof. Dr. Florian Schatz for project oversight and support.
-
-## Limitations
-- Requires a well-lit environment for accurate detection.
-- May need calibration for different lighting and facial features.
-
-## Future Improvements
-- Add support for more complex grids.
-- Improve robustness in varying lighting conditions.
-- Implement a calibration routine for different users.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
