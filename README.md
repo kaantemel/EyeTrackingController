@@ -1,19 +1,16 @@
 
 # Eye Tracking Controller for ALS Patients
 
-This project provides an eye-tracking-based controller designed to assist ALS (Amyotrophic Lateral Sclerosis) patients in interacting with applications. The system leverages computer vision techniques to detect eye gaze direction and blinking patterns for selecting and interacting with a virtual grid.
+This repository contains the implementation of an eye-tracking system designed for ALS patients to control various room functions (like lights, TV, and radio) using eye movements. The system utilizes standard webcams and operates on general-purpose computers, requiring no specialized hardware.
+
+## Project Overview
+Patients with Amyotrophic Lateral Sclerosis (ALS) often face significant mobility challenges, primarily relying on eye movements for communication and interaction. This project aims to empower these patients by enabling them to control a smart home environment through eye tracking.
 
 ## Features
-- **Eye Gaze Detection**: Tracks gaze direction to navigate through a 4x4 grid interface.
-- **Blink Detection**: Detects blinking to confirm selection of grid cells.
-- **User-Friendly Interface**: Visual feedback on cell highlighting and selections.
-- **Non-Invasive**: Requires only a webcam for operation.
-
-## How It Works
-1. **Face and Eye Detection**: Uses `dlib` for detecting facial landmarks.
-2. **Blink Ratio**: Calculates the eye aspect ratio to identify blinks.
-3. **Gaze Ratio**: Computes gaze direction based on eye positioning and adjusts the highlighted cell.
-4. **Grid Interaction**: Highlights grid cells based on gaze direction and selects them upon detecting a series of blinks.
+- **Eye and Blink Detection**: Utilizes OpenCV and Dlib to detect the user's eye movements and blinks accurately.
+- **Horizontal Gaze Interaction**: Tracks horizontal eye movements to navigate through a grid-based interface.
+- **Blink-Based Interaction**: Employs blink detection for making selections, minimizing false activations.
+- **Simple, Grid-Based UI**: Features a straightforward interface that's easy to navigate using eye movements.
 
 ## Installation
 
@@ -36,7 +33,45 @@ This project provides an eye-tracking-based controller designed to assist ALS (A
    ```bash
    python EyeTrackingController.py
    ```
+## User Interface
+### Main Menu
+The main menu provides three options:
+- TV
+- Radio
+- Light
+  
+![alt text](https://i.imgur.com/fhbiHyT.png)
 
+### Submenu: TV Controls
+Options available:
+- Channel Up
+- Channel Down
+- Volume Up
+- Volume Down
+- On/Off
+- Back to Main Menu
+
+![alt text](https://i.imgur.com/ccxChlx.png)
+
+### Submenu: Radio Controls
+Options available:
+- Radio Up
+- Radio Down
+- Volume Up
+- Volume Down
+- On/Off
+- Back to Main Menu
+  
+![alt text](https://i.imgur.com/IyCSO2l.png)
+
+### Submenu: Light Controls
+Options available:
+- On
+- Off
+- Back to Main Menu
+
+![alt text](https://i.imgur.com/oeawb11.png)
+  
 ## Usage
 - Position yourself in front of the webcam.
 - Use your gaze to navigate the grid:
@@ -51,6 +86,20 @@ This project provides an eye-tracking-based controller designed to assist ALS (A
   - OpenCV
   - NumPy
   - dlib
+
+## Further Improvements
+- **HTTP Requests**: Currently, the system prints out commands based on eye movements and blinks. Future implementations will include sending HTTP requests to a server or devices to execute the commands in a smart home setup, allowing for real control over home appliances.
+- **Lock System**: To enhance usability and prevent unintended selections, a locking mechanism will be integrated. This lock system will require a specific, deliberate action, such as a longer gaze or a sequence of blinks, to unlock command execution. This feature aims to ensure that commands are only activated intentionally, improving the system's reliability for long-term use.
+
+## Calibration
+Calibration is straightforward and does not require any specific user interaction, thanks to the robust design which uses simple eye movement detection without the need for precise pupil tracking.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+## Acknowledgments
+- Prof. Dr. Tillmann Schwörer and Prof. Dr. Stephan Doerfel for their guidance.
+- Prof. Dr. Florian Schatz for project oversight and support.
 
 ## Limitations
 - Requires a well-lit environment for accurate detection.
