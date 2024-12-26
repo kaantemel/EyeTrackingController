@@ -33,6 +33,19 @@ Patients with Amyotrophic Lateral Sclerosis (ALS) often face significant mobilit
    ```bash
    python EyeTrackingController.py
    ```
+## Usage
+- Position yourself in front of the webcam.
+- Use your gaze to navigate the grid:
+  - **Right Movement**: Gaze left.
+  - **Left Movement**: Gaze right.
+- Blink three times consecutively to select a highlighted cell.
+
+## Usage Demonstration
+### The Demo
+![Adsztasarm1-ezgif com-optimize](https://github.com/user-attachments/assets/35b0a035-1c6f-4d01-b5ad-3f5f7f4bfef2)
+### The Output
+![alt text](https://i.imgur.com/RwNFWHx.jpeg)
+
 ## User Interface
 ### Main Menu
 The main menu provides three options:
@@ -71,13 +84,6 @@ Options available:
 - Back to Main Menu
 
 ![alt text](https://i.imgur.com/oeawb11.png)
-  
-## Usage
-- Position yourself in front of the webcam.
-- Use your gaze to navigate the grid:
-  - **Right Movement**: Gaze left.
-  - **Left Movement**: Gaze right.
-- Blink three times consecutively to select a highlighted cell.
 
 ## Requirements
 - **Hardware**: Webcam-enabled device.
@@ -94,8 +100,6 @@ Options available:
 ## Calibration
 Calibration is straightforward and does not require any specific user interaction, thanks to the robust design which uses simple eye movement detection without the need for precise pupil tracking.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Acknowledgments
 - Prof. Dr. Tillmann Schwörer and Prof. Dr. Stephan Doerfel for their guidance.
@@ -109,3 +113,6 @@ Calibration is straightforward and does not require any specific user interactio
 - Add support for more complex grids.
 - Improve robustness in varying lighting conditions.
 - Implement a calibration routine for different users.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
